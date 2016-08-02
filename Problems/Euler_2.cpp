@@ -20,6 +20,7 @@ int main(void)
 	int first = 1, second = 2;
 	int temp;
 	int sum = 0;
+
 	while (second <= 4000000)
 	{
 		temp = second;
@@ -29,6 +30,7 @@ int main(void)
 			sum += first;
 	}
 	printf("The result is: %d", sum);
+
 	system("pause");
 	return 0;
 }
