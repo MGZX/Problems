@@ -14,22 +14,33 @@ int is_palindromic(int n_i); // check if n is palindromic or not
 
 int main(void)
 {
+	int max = 0;
 	for (int i = 999; i > 100; i--)
 		for (int j = 999; j > 100; j--)
 		{
 			if (1 == is_palindromic(i * j))
 			{
-				std::cout << i * j << " = " << i << " * " << j <<std::endl;
-				std::cin.get();
-				return 0;
+				if (i * j > max)
+					max = i * j;
 			}
 		}
-	std::cerr << "Not Found!\n";
-	return 1;
+	if (max == 0)
+	{
+		std::cerr << "Not Found!\n";
+		std::cin.get();
+		return 1;
+	}
+	else
+	{
+		std::cout << max << std::endl;
+		std::cin.get();
+		return 0;
+	}
 }
+
 int is_palindromic(int n_i)
 {
-	int num[7] = { 0 };
+	int num[7] = {0};
 	int size = 0;
 	do
 	{
