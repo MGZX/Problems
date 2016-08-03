@@ -14,12 +14,12 @@ int is_palindromic(int n_i); // check if n is palindromic or not
 
 int main(void)
 {
-	for (int i = 999; i > 100; i++)
-		for (int j = 999; j > 100; j++)
+	for (int i = 999; i > 100; i--)
+		for (int j = 999; j > 100; j--)
 		{
 			if (1 == is_palindromic(i * j))
 			{
-				std::cout << i * j << std::endl;
+				std::cout << i * j << " = " << i << " * " << j <<std::endl;
 				std::cin.get();
 				return 0;
 			}
