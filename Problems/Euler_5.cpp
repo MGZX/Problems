@@ -16,20 +16,46 @@ int is_prime(int n_i);
 
 int main(void)
 {
-	
+	int n = 20;
+	int data[2][20] = { 0 };
+	int num = 0;
+	int result = 1;
+	for (int i = 2; i <= 20; i++)
+	{
+		if (1 == is_prime(i))
+		{
+			data[0][num] = i;
+			data[1][num] = 1;
+			num++;
+		}
+		else
+		{
+			for (int j = 0; j < num; j++)
+			{
+				int temp_n = 0;
+				int temp_i = i;
+				while (temp_i % data[0][j] == 0)
+				{
+					temp_n++;
+					temp_i /= data[0][j];
+				}
+				if (temp_n > data[1][j])
+					data[1][j] = temp_n;
+			}
+		}
+	}
+	for (int i = 0; i < num; i++)
+		for (int j = 0; j < data[1][i]; j++)
+			result *= data[0][i];
+	cout << result << endl;
+	cin.get();
 	return 0;
 }
 
 int is_prime(int n_i)
 {
-	int i;
-	for (i = 2; i < n_i / 2; i++)
-	{
+	for (int i = 2; i <= n_i / 2; i++)
 		if (n_i % i == 0)
-			break;
-	}
-	if (i < n_i / 2)
-		return 0;
-	else
-		return 1;
+			return 0;
+	return 1;
 }
