@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Euler_6.cpp" />
+    <ClCompile Include="Euler_7.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{31DE701F-B3F0-44C6-8B9A-70DDB812B7F9}</ProjectGuid>
