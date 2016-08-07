@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Euler_5.cpp">
+    <ClCompile Include="Euler_6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
